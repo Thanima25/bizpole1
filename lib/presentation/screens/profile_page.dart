@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'choose_business.dart';
+
 void main() {
   runApp(const BizpoleApp());
 }
@@ -249,6 +251,11 @@ class _ProfileCompletionScreenState extends State<ProfileCompletionScreen> {
                     onPressed: () {
                       // Handle save profile
                       _saveProfile();
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Choose_Business_Screen()),
+                      );
+
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.orange,

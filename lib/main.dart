@@ -1,6 +1,6 @@
+import 'package:bizpole_one_user/presentation/screens/login.dart';
 import 'package:bizpole_one_user/presentation/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'login.dart';
 //
 // void main() {
 //   runApp( LoginPage());
@@ -27,3 +27,35 @@ class BizpoleApp extends StatelessWidget {
     );
   }
 }
+
+
+// wrapping your app with Bloc
+
+
+// void main() {
+//   final authRepository = AuthRepositoryImpl(AuthRemoteDataSource(ApiClient()));
+//
+//   runApp(
+//     MultiBlocProvider(
+//       providers: [
+//         BlocProvider(
+//           create: (_) => AuthBloc(
+//             loginUser: LoginUser(authRepository),
+//             signupUser: SignupUser(authRepository),
+//           ),
+//         ),
+//       ],
+//       child: const BizpoleApp(),
+//     ),
+//   );
+// }
+
+
+//bloc for login and signup
+// BlocProvider(
+// create: (_) => AuthBloc(
+// loginUser: sl<LoginUser>(),
+// signupUser: sl<SignupUser>(),
+// ),
+// child: const BizpoleSignupScreen(),
+// ),
